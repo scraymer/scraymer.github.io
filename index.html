@@ -10,9 +10,9 @@
     <title>Samuel William Craymer</title>
     
     <link href="css/bootstrap.css" rel="stylesheet" />
-	<link href="css/coming-sssoon.css" rel="stylesheet" />    
+	<link href="css/cover.css" rel="stylesheet" />    
     
-    <!--     Fonts     -->
+    <!-- Fonts -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
   
@@ -66,25 +66,25 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
+
+<!-- Change the image source '/images/default.jpg' with your favourite image. -->
 <div class="main" style="background-image: url('images/ottawa.png')">
-	
-	<!--    Change the image source '/images/default.jpg' with your favourite image.     -->
 	
 	<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
 		<source src="https://dl.dropbox.com/u/36151686/sites/video/ottawa.mp4" type="video/mp4"> 
 		Video not supported 
 	</video>
     
+	<!-- You can change the black color for the filter with those colors: blue, green, red, orange -->
     <div class="cover orange" data-color="orange"></div>
-     
-<!--   You can change the black color for the filter with those colors: blue, green, red, orange       -->
-
+	
     <div class="container">
-        <h1 class="logo cursive">
+        
+		<!-- H1 can have 2 designs: "logo" and "logo cursive" -->
+		<h1 class="logo cursive">
             Samuel William Craymer<br><small>Ottawa, Canada</small>
         </h1>
-<!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
-        
+		
         <div class="content">
             <h4 class="motto">Visit my <a href="https://www.linkedin.com/in/scraymer#background-projects" class="text-warning">LinkedIn</a> profile for current and past projects.</h4>
             <div class="subscribe">
@@ -112,8 +112,19 @@
       </div>
     </div>
  </div>
- </body>
-   <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-   <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+$('#video_background').on('play', function () {
+	$(this).fadeIn();
+});
+
+$('#video_background').on('pause ended', function () {
+	$(this).fadeOut();
+});
+</script>
+
+ </body>
 </html>
